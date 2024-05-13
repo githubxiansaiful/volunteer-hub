@@ -97,7 +97,7 @@ const Register = () => {
                             </div>
                             <div className="relative">
                                 <input type={showPass ? "text" : "password"} placeholder="Password" {...register("password", { required: true })} />
-                                <p onClick={() => setShowPass(!showPass)} className="pass-eyes"><i class="fa-solid fa-eye"></i></p>
+                                <p onClick={() => setShowPass(!showPass)} className="pass-eyes"><i className="fa-solid fa-eye"></i></p>
                             </div>
                             <div>
                                 <button className="btn w-full btn-primary">Register</button>

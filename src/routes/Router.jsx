@@ -25,13 +25,11 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                // loader: () => fetch('/public/fakedata.json')
                 loader: () => fetch(`${import.meta.env.VITE_API_URL}/posts`)
             },
             {
                 path: '/volunteer',
                 element: <Volunteer></Volunteer>,
-                // loader: () => fetch('/public/fakedata.json')
                 loader: () => fetch(`${import.meta.env.VITE_API_URL}/posts`)
             },
             {
@@ -61,8 +59,7 @@ const router = createBrowserRouter([
             {
                 path: '/volunteer-details/:id',
                 element: <PrivateRoute><VolunteerDetails></VolunteerDetails></PrivateRoute>,
-                // loader: () => fetch('/public/fakedata.json')
-                loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/post/${params.id}`)
+                loader: ({ params }) => fetch(`${import.meta.env.VITE_API_URL}/post/${params.id}`)
             },
             {
                 path: '/update-post/:id',

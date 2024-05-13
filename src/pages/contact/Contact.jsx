@@ -28,7 +28,7 @@ const Contact = () => {
                         <div className="contact-card hover-effect">
                             <div className="mb-5">
                                 <div className="cart-icon-box">
-                                    <i class="fa-solid fa-phone"></i>
+                                    <i className="fa-solid fa-phone"></i>
                                 </div>
                             </div>
                             <div>
@@ -39,7 +39,7 @@ const Contact = () => {
                         <div className="contact-card hover-effect">
                             <div className="mb-5">
                                 <div className="cart-icon-box">
-                                    <i class="fa-solid fa-envelope"></i>
+                                    <i className="fa-solid fa-envelope"></i>
                                 </div>
                             </div>
                             <div>
@@ -50,7 +50,7 @@ const Contact = () => {
                         <div className="contact-card hover-effect">
                             <div className="mb-5">
                                 <div className="cart-icon-box">
-                                    <i class="fa-solid fa-map"></i>
+                                    <i className="fa-solid fa-map"></i>
                                 </div>
                             </div>
                             <div>

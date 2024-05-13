@@ -13,7 +13,7 @@ const Header = () => {
     }
 
     const toggleTheme = (event) => {
-        if(event.target.checked) setDarkMode();
+        if (event.target.checked) setDarkMode();
         else setLightMode()
     }
 
