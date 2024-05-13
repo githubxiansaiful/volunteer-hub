@@ -3,9 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../firebase/FirebaseProvider";
 
 const Header = () => {
-
-    // const {currentUser, logOutUser} = useContext()
-
     const { userCurrent, logOutUser } = useContext(AuthContext);
 
     const setDarkMode = () => {
