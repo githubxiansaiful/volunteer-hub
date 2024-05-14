@@ -263,3 +263,11 @@ button.modal-close {
 html.dark body {
     background: #1D232A;
 }
+svg.icon-moon {
+    position: relative;
+    left: -5px;
+}
+svg.icon-sun {
+    position: relative;
+    right: -5px;
+}
