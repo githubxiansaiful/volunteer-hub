@@ -18,7 +18,7 @@ const Login = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    console.log(location)
+    // console.log(location)
     const from = location?.state || "/my-profile";
     const handleSocialLogin = socialProvider => {
         socialProvider()
@@ -36,7 +36,7 @@ const Login = () => {
                 navigate(from);
             })
             .catch(error => {
-                console.log('Wrong Email and Pass', error);
+                // console.log('Wrong Email and Pass', error);
                 setLoginError('invalid email and password');
             });
     }
@@ -50,9 +50,9 @@ const Login = () => {
                 <div>
                     <h3 className="text-center title-text mb-[25px]">Log in</h3>
                     <div className="text-center space-x-3 mb-5">
-                        <button onClick={() => handleSocialLogin(googleLogin)} className="social-login"><img src="https://auth.hostinger.com/assets/images/oauth/google.svg" /></button>
-                        <button onClick={() => handleSocialLogin(facebookLogin)} className="social-login bg-[#1877f2]"><img src="https://auth.hostinger.com/assets/images/oauth/facebook.svg" /></button>
-                        <button onClick={() => handleSocialLogin(githubLogin)} className="social-login bg-[#2f363d]"><img src="https://auth.hostinger.com/assets/images/oauth/github.svg" /></button>
+                        <button onClick={() => handleSocialLogin(googleLogin)} className="social-login dark:border-[#f1f1f124]"><img src="https://auth.hostinger.com/assets/images/oauth/google.svg" /></button>
+                        <button onClick={() => handleSocialLogin(facebookLogin)} className="social-login dark:border-[#f1f1f124] bg-[#1877f2]"><img src="https://auth.hostinger.com/assets/images/oauth/facebook.svg" /></button>
+                        <button onClick={() => handleSocialLogin(githubLogin)} className="social-login dark:border-[#f1f1f124] bg-[#2f363d]"><img src="https://auth.hostinger.com/assets/images/oauth/github.svg" /></button>
                     </div>
                     <div className="flex flex-col w-full border-opacity-50">
                         <div className="divider">OR</div>
@@ -64,10 +64,10 @@ const Login = () => {
                             </div>
                             <div className="relative">
                                 <input type={showPassword ? "text" : "password"} placeholder="Password" {...register("password", { required: true })} />
-                                <p onClick={() => setShowPassword(!showPassword)} className="pass-eyes"><i class="fa-solid fa-eye"></i></p>
+                                <p onClick={() => setShowPassword(!showPassword)} className="pass-eyes"><i className="fa-solid fa-eye"></i></p>
                             </div>
                             <div>
-                                <button className="btn w-full bg-[#ddd]">Log in</button>
+                                <button className="btn w-full btn-primary">Log in</button>
                             </div>
                         </form>
                         {

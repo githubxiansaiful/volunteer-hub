@@ -78,16 +78,16 @@ const VolunteerDetails = () => {
                             <img className="w-full" src={thumbnail} alt="" />
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-5 border-b pb-5">
-                            <p className="bg-[#f1f1f1] rounded-lg p-2 text-base lg:text-xl"><i className="fa-solid fa-tag"></i> {category}</p>
-                            <p className="bg-[#f1f1f1] rounded-lg p-2 text-base lg:text-xl"><i className="fa-solid fa-clock"></i> {new Date(deadline).toLocaleDateString()}</p>
-                            <p className="bg-[#f1f1f1] rounded-lg p-2 text-base lg:text-xl"><i className="fa-solid fa-users"></i> Need: {volunteers_needed}</p>
+                            <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] rounded-lg p-2 text-base lg:text-xl"><i className="fa-solid fa-tag"></i> {category}</p>
+                            <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] rounded-lg p-2 text-base lg:text-xl"><i className="fa-solid fa-clock"></i> {new Date(deadline).toLocaleDateString()}</p>
+                            <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] rounded-lg p-2 text-base lg:text-xl"><i className="fa-solid fa-users"></i> Need: {volunteers_needed}</p>
                         </div>
                         <div className="mb-5 border-b pb-5">
                             <h1 className="font-semibold text-2xl lg:text-3xl">{post_title}</h1>
                             <p className="text-base lg:text-xl">{description}</p>
                         </div>
                         <div className="mb-5">
-                            <p className="bg-[#f1f1f1] rounded-lg py-3 px-5 text-base lg:text-xl"><i className="fa-solid fa-location-dot"></i> {location}</p>
+                            <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] rounded-lg py-3 px-5 text-base lg:text-xl"><i className="fa-solid fa-location-dot"></i> {location}</p>
                         </div>
                         <div className="bg-[#171b2a] rounded-lg">
                             <div className="space-y-5 py-10 lg:py-20 px-10 text-white text-center">
@@ -101,7 +101,7 @@ const VolunteerDetails = () => {
             </div>
             {
                 modal && <div className="modal-popup">
-                    <div className="modal-content">
+                    <div className="modal-content dark:bg-[#171B2A]">
                         <button onClick={handleModal} className="modal-close"><i className="fa-solid fa-circle-xmark"></i></button>
                         <div className="border-b pb-5 mb-5">
                             <h2 className="text-center text-xl font-semibold">Be A Volunteer</h2>

@@ -27,7 +27,7 @@ const Volunteer = () => {
             </div>
             <div>
                 <div className='container'>
-                    <div className="flex justify-between bg-[#f1f1f1] rounded-lg py-3 px-3 mb-10">
+                    <div className="flex justify-between bg-[#f1f1f1] dark:bg-[#f1f1f10a] rounded-lg py-3 px-3 mb-10">
                         <div>
                             <p className='text-base lg:text-xl'>Items: {allVolunteers.length}</p>
                         </div>
@@ -43,7 +43,7 @@ const Volunteer = () => {
                             <div className={isGridView ? 'grid-display block' : 'grid-display hidden'}>
                                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20'>
                                     {allVolunteers.map(singleVol => (
-                                        <div key={singleVol._id} className='singleVolPost overflow-hidden rounded-lg p-5 border hover-effect'>
+                                        <div key={singleVol._id} className='singleVolPost overflow-hidden rounded-lg p-5 border dark:border-[#f1f1f10a] hover-effect'>
                                             <div className="mb-3 post-thumbnail">
                                                 <img src={singleVol.thumbnail} />
                                             </div>
@@ -51,8 +51,8 @@ const Volunteer = () => {
                                                 <h2 className="font-semibold text-xl">{window.innerWidth > 768 ? (singleVol.post_title.length > 22 ? singleVol.post_title.slice(0, 22) + '...' : singleVol.post_title) : singleVol.post_title}</h2>
                                             </div>
                                             <div className="flex justify-center items-center space-x-2 mb-3">
-                                                <p className="bg-[#f1f1f1] w-full py-2 px-2 rounded-lg tooltip" data-tip="Volunteer Category"><i className="fa-solid fa-tag"></i> {singleVol.category}</p>
-                                                <p className="bg-[#f1f1f1] w-full py-2 px-2 rounded-lg tooltip" data-tip="Apply Last Date"><i className="fa-solid fa-clock"></i> {new Date(singleVol.deadline).toLocaleDateString()}</p>
+                                                <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] w-full py-2 px-2 rounded-lg tooltip" data-tip="Volunteer Category"><i className="fa-solid fa-tag"></i> {singleVol.category}</p>
+                                                <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] w-full py-2 px-2 rounded-lg tooltip" data-tip="Apply Last Date"><i className="fa-solid fa-clock"></i> {new Date(singleVol.deadline).toLocaleDateString()}</p>
                                             </div>
                                             <div>
                                                 <Link to={`/volunteer-details/${singleVol._id}`} className="btn btn-neutral w-full">Learn More</Link>
@@ -64,7 +64,7 @@ const Volunteer = () => {
                             <div className={isGridView ? 'table-view-items hidden' : 'table-view-items block'}>
                                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
                                     {allVolunteers.map(tableVol => (
-                                        <div key={tableVol} className='overflow-hidden rounded-lg p-5 border hover-effect'>
+                                        <div key={tableVol._id} className='overflow-hidden rounded-lg p-5 border hover-effect'>
                                             <div className='grid grid-cols-2 gap-3 items-center'>
                                                 <div>
                                                     <img src={tableVol.thumbnail} alt="" />
@@ -74,8 +74,8 @@ const Volunteer = () => {
                                                         <h2 className="font-semibold text-xl">{window.innerWidth > 768 ? (tableVol.post_title.length > 22 ? tableVol.post_title.slice(0, 22) + '...' : tableVol.post_title) : tableVol.post_title}</h2>
                                                     </div>
                                                     <div className="justify-center items-center space-y-2 mb-3">
-                                                        <p className="bg-[#f1f1f1] w-full py-2 px-2 rounded-lg tooltip" data-tip="Volunteer Category"><i className="fa-solid fa-tag"></i> {tableVol.category}</p>
-                                                        <p className="bg-[#f1f1f1] w-full py-2 px-2 rounded-lg tooltip" data-tip="Apply Last Date"><i className="fa-solid fa-clock"></i> {tableVol.deadline}</p>
+                                                        <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] w-full py-2 px-2 rounded-lg tooltip" data-tip="Volunteer Category"><i className="fa-solid fa-tag"></i> {tableVol.category}</p>
+                                                        <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] w-full py-2 px-2 rounded-lg tooltip" data-tip="Apply Last Date"><i className="fa-solid fa-clock"></i> {tableVol.deadline}</p>
                                                     </div>
                                                     <div>
                                                         <Link className="text-center block bg-black text-white py-2 px-2 rounded-lg w-full">Learn More</Link>

@@ -17,7 +17,7 @@ const Contact = () => {
             <Helmet>
                 <title>Contact Us | Volunteer Hub</title>
             </Helmet>
-            <div className="bg-[#000] py-[100px] lg:py-[150px]">
+            <div className="bg-[#171B2A] py-[100px] lg:py-[150px]">
                 <div className="container">
                     <h1 className="text-4xl text-center font-bold tracking-tight text-white sm:text-6xl">Contact Us</h1>
                 </div>
@@ -25,7 +25,7 @@ const Contact = () => {
             <div className="container">
                 <div className="mt-20 lg:mt-[60px] mb-20 lg:mb-[60px]">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-                        <div className="contact-card hover-effect">
+                        <div className="contact-card border dark:border-[#f1f1f10a] hover-effect">
                             <div className="mb-5">
                                 <div className="cart-icon-box">
                                     <i className="fa-solid fa-phone"></i>
@@ -36,7 +36,7 @@ const Contact = () => {
                                 <p>+1 123456789</p>
                             </div>
                         </div>
-                        <div className="contact-card hover-effect">
+                        <div className="contact-card border dark:border-[#f1f1f10a] hover-effect">
                             <div className="mb-5">
                                 <div className="cart-icon-box">
                                     <i className="fa-solid fa-envelope"></i>
@@ -47,7 +47,7 @@ const Contact = () => {
                                 <p>inf@volunteerhub.com</p>
                             </div>
                         </div>
-                        <div className="contact-card hover-effect">
+                        <div className="contact-card border dark:border-[#f1f1f10a] hover-effect">
                             <div className="mb-5">
                                 <div className="cart-icon-box">
                                     <i className="fa-solid fa-map"></i>

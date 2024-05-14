@@ -95,7 +95,7 @@ const ManagePost = () => {
                                         posts.length > 0 ? (
                                             // If there are posts, render them
                                             posts.map(post => (
-                                                <div key={post._id} className="rounded-xl border p-5">
+                                                <div key={post._id} className="rounded-xl border dark:border-[#f1f1f10a] p-5">
                                                     <div className="mb-4 my-spot-img">
                                                         <img src={post.thumbnail} alt="" />
                                                     </div>
@@ -107,7 +107,7 @@ const ManagePost = () => {
                                                         <p><i className="fa-solid fa-clock"></i> Deadline: {new Date(post.deadline).toLocaleDateString()}</p>
                                                         <p><i className="fa-solid fa-location-dot"></i> {post.location}</p>
                                                         <p><i className="fa-solid fa-users"></i> Apply Seat {post.volunteers_needed}</p>
-                                                        <p className="bg-[#f1f1f1] px-3 py-3 rounded-lg"><i className="fa-solid fa-user"></i> Posted by: {post.displayName}</p>
+                                                        <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] px-3 py-3 rounded-lg"><i className="fa-solid fa-user"></i> Posted by: {post.displayName}</p>
                                                     </div>
                                                     <div className="grid grid-cols-2 gap-3 mt-3">
                                                         <Link to={`/update-post/${post._id}`}><button className="btn btn-primary w-full"><i className="fa-solid fa-pen-to-square"></i></button></Link>
