@@ -25,7 +25,8 @@ const VolunteerRequestedPost = () => {
 
     // Delete item
     const handleDeleteItem = (id) => {
-        fetch(`${import.meta.env.VITE_API_URL}/delete-application/${id}`, {
+        // fetch(`${import.meta.env.VITE_API_URL}/delete-application/${id}`, {
+        fetch(`https://volunteer-management-server-lilac.vercel.app/delete-application/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())
