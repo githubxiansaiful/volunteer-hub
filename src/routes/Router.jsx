@@ -25,12 +25,14 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch(`${import.meta.env.VITE_API_URL}/posts`)
+                // loader: () => fetch(`${import.meta.env.VITE_API_URL}/posts`)
+                loader: () => fetch(`https://volunteer-management-server-lilac.vercel.app/posts`)
             },
             {
                 path: '/volunteer',
                 element: <Volunteer></Volunteer>,
-                loader: () => fetch(`${import.meta.env.VITE_API_URL}/posts`)
+                // loader: () => fetch(`${import.meta.env.VITE_API_URL}/posts`)
+                loader: () => fetch(`https://volunteer-management-server-lilac.vercel.app/posts`)
             },
             {
                 path: '/login',
