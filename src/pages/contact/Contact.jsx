@@ -19,7 +19,7 @@ const Contact = () => {
             </Helmet>
             <div className="bg-[#171B2A] py-[100px] lg:py-[150px]">
                 <div className="container">
-                    <h1 className="text-4xl text-center font-bold tracking-tight text-white sm:text-6xl">Contact Us</h1>
+                    <h1 className="text-4xl text-center font-bold tracking-tight text-white dark:text-white sm:text-6xl">Contact Us</h1>
                 </div>
             </div>
             <div className="container">
@@ -28,34 +28,34 @@ const Contact = () => {
                         <div className="contact-card border dark:border-[#f1f1f10a] hover-effect">
                             <div className="mb-5">
                                 <div className="cart-icon-box">
-                                    <i className="fa-solid fa-phone"></i>
+                                    <i className="fa-solid fa-phone dark:text-white"></i>
                                 </div>
                             </div>
                             <div>
-                                <h3 className="text-xl font-semibold">Phone</h3>
-                                <p>+1 123456789</p>
+                                <h3 className="text-xl font-semibold dark:text-white">Phone</h3>
+                                <p className="dark:text-white">+1 123456789</p>
                             </div>
                         </div>
                         <div className="contact-card border dark:border-[#f1f1f10a] hover-effect">
                             <div className="mb-5">
                                 <div className="cart-icon-box">
-                                    <i className="fa-solid fa-envelope"></i>
+                                    <i className="fa-solid fa-envelope dark:text-white"></i>
                                 </div>
                             </div>
                             <div>
-                                <h3 className="text-xl font-semibold">Email</h3>
-                                <p>inf@volunteerhub.com</p>
+                                <h3 className="text-xl font-semibold dark:text-white">Email</h3>
+                                <p className="dark:text-white">inf@volunteerhub.com</p>
                             </div>
                         </div>
                         <div className="contact-card border dark:border-[#f1f1f10a] hover-effect">
                             <div className="mb-5">
                                 <div className="cart-icon-box">
-                                    <i className="fa-solid fa-map"></i>
+                                    <i className="fa-solid fa-map dark:text-white"></i>
                                 </div>
                             </div>
                             <div>
-                                <h3 className="text-xl font-semibold">Address</h3>
-                                <p>456 Maple Avenue, City, State</p>
+                                <h3 className="text-xl font-semibold dark:text-white">Address</h3>
+                                <p className="dark:text-white">456 Maple Avenue, City, State</p>
                             </div>
                         </div>
                     </div>
@@ -63,23 +63,23 @@ const Contact = () => {
                 <div>
                     <div>
                         <form onSubmit={handleSubmit(onSubmit)}  className="space-y-5">
-                            <label className="input input-bordered flex items-center gap-2">
+                            <label className="input input-bordered flex items-center gap-2 dark:bg-[#f1f1f10a] dark:text-white">
                                 Name
                                 <input type="text" className="grow" placeholder="Jon Doe" {...register("name", { required: true })} />
                             </label>
-                            <label className="input input-bordered flex items-center gap-2">
+                            <label className="input input-bordered flex items-center gap-2 dark:bg-[#f1f1f10a] dark:text-white">
                                 Phone
                                 <input type="text" className="grow" placeholder="Phone" />
                             </label>
-                            <label className="input input-bordered flex items-center gap-2">
+                            <label className="input input-bordered flex items-center gap-2 dark:bg-[#f1f1f10a] dark:text-white">
                                 Email
                                 <input type="text" className="grow" placeholder="demo@site.com" />
                             </label>
-                            <label className="input input-bordered flex items-center gap-2">
+                            <label className="input input-bordered flex items-center gap-2 dark:bg-[#f1f1f10a] dark:text-white">
                                 Subject
                                 <input type="text" className="grow" placeholder="Subject" />
                             </label>
-                            <textarea className="textarea textarea-bordered w-full text-base" placeholder="Message"></textarea>
+                            <textarea className="textarea textarea-bordered w-full text-base dark:bg-[#f1f1f10a] dark:text-white" placeholder="Message"></textarea>
                             <button className="btn btn-primary hover-effect">Send Message</button>
                         </form>
                     </div>

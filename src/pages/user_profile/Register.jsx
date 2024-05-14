@@ -75,28 +75,28 @@ const Register = () => {
             </Helmet>
             <div className="container">
                 <div>
-                    <h3 className="text-center title-text mb-[25px]">Register</h3>
+                    <h3 className="text-center title-text mb-[25px] dark:text-white">Register</h3>
                     <div className="text-center space-x-3 mb-5">
                         <button onClick={() => handleSocialRegister(googleLogin)} className="social-login dark:border-[#f1f1f124]"><img src="https://auth.hostinger.com/assets/images/oauth/google.svg" /></button>
                         <button onClick={() => handleSocialRegister(facebookLogin)} className="social-login dark:border-[#f1f1f124] bg-[#1877f2]"><img src="https://auth.hostinger.com/assets/images/oauth/facebook.svg" /></button>
                         <button onClick={() => handleSocialRegister(githubLogin)} className="social-login dark:border-[#f1f1f124] bg-[#2f363d]"><img src="https://auth.hostinger.com/assets/images/oauth/github.svg" /></button>
                     </div>
                     <div className="flex flex-col w-full border-opacity-50">
-                        <div className="divider">OR</div>
+                        <div className="divider dark:text-white">OR</div>
                     </div>
                     <div className="mt-5 login-form">
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div>
-                                <input type="text" placeholder="Full Name" {...register("FullName", { required: true })} />
+                                <input className="dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a]" type="text" placeholder="Full Name" {...register("FullName", { required: true })} />
                             </div>
                             <div>
-                                <input type="email" placeholder="Email" {...register("email", { required: true })} />
+                                <input className="dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a]" type="email" placeholder="Email" {...register("email", { required: true })} />
                             </div>
                             <div>
-                                <input type="url" placeholder="photoURL" {...register("image", { required: true })} />
+                                <input className="dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a]" type="url" placeholder="photoURL" {...register("image", { required: true })} />
                             </div>
                             <div className="relative">
-                                <input type={showPass ? "text" : "password"} placeholder="Password" {...register("password", { required: true })} />
+                                <input className="dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a]" type={showPass ? "text" : "password"} placeholder="Password" {...register("password", { required: true })} />
                                 <p onClick={() => setShowPass(!showPass)} className="pass-eyes"><i className="fa-solid fa-eye"></i></p>
                             </div>
                             <div>
@@ -117,7 +117,7 @@ const Register = () => {
                         }
                     </div>
                     <div className="text-center mt-5">
-                        <h3>Already have an account? <Link className="underline" to="/login">Log in Now!</Link></h3>
+                        <h3 className="dark:text-white">Already have an account? <Link className="underline" to="/login">Log in Now!</Link></h3>
                     </div>
                 </div>
             </div>

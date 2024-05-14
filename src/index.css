@@ -260,4 +260,6 @@ button.modal-close {
     stroke-dasharray: 125.6;
     transform: rotate(-90deg);
   }
-  
+html.dark body {
+    background: #1D232A;
+}

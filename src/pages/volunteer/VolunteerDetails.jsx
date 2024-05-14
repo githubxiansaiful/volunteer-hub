@@ -78,16 +78,16 @@ const VolunteerDetails = () => {
                             <img className="w-full" src={thumbnail} alt="" />
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-5 border-b pb-5">
-                            <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] rounded-lg p-2 text-base lg:text-xl"><i className="fa-solid fa-tag"></i> {category}</p>
-                            <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] rounded-lg p-2 text-base lg:text-xl"><i className="fa-solid fa-clock"></i> {new Date(deadline).toLocaleDateString()}</p>
-                            <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] rounded-lg p-2 text-base lg:text-xl"><i className="fa-solid fa-users"></i> Need: {volunteers_needed}</p>
+                            <p className="bg-[#f1f1f1] dark:text-white dark:bg-[#f1f1f10a] rounded-lg p-2 text-base lg:text-xl"><i className="fa-solid fa-tag"></i> {category}</p>
+                            <p className="bg-[#f1f1f1] dark:text-white dark:bg-[#f1f1f10a] rounded-lg p-2 text-base lg:text-xl"><i className="fa-solid fa-clock"></i> {new Date(deadline).toLocaleDateString()}</p>
+                            <p className="bg-[#f1f1f1] dark:text-white dark:bg-[#f1f1f10a] rounded-lg p-2 text-base lg:text-xl"><i className="fa-solid fa-users"></i> Need: {volunteers_needed}</p>
                         </div>
                         <div className="mb-5 border-b pb-5">
-                            <h1 className="font-semibold text-2xl lg:text-3xl">{post_title}</h1>
-                            <p className="text-base lg:text-xl">{description}</p>
+                            <h1 className="font-semibold text-2xl lg:text-3xl dark:text-white">{post_title}</h1>
+                            <p className="text-base lg:text-xl dark:text-white">{description}</p>
                         </div>
                         <div className="mb-5">
-                            <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] rounded-lg py-3 px-5 text-base lg:text-xl"><i className="fa-solid fa-location-dot"></i> {location}</p>
+                            <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] dark:text-white rounded-lg py-3 px-5 text-base lg:text-xl"><i className="fa-solid fa-location-dot"></i> {location}</p>
                         </div>
                         <div className="bg-[#171b2a] rounded-lg">
                             <div className="space-y-5 py-10 lg:py-20 px-10 text-white text-center">
@@ -102,50 +102,50 @@ const VolunteerDetails = () => {
             {
                 modal && <div className="modal-popup">
                     <div className="modal-content dark:bg-[#171B2A]">
-                        <button onClick={handleModal} className="modal-close"><i className="fa-solid fa-circle-xmark"></i></button>
+                        <button onClick={handleModal} className="modal-close dark:text-white"><i className="fa-solid fa-circle-xmark"></i></button>
                         <div className="border-b pb-5 mb-5">
-                            <h2 className="text-center text-xl font-semibold">Be A Volunteer</h2>
+                            <h2 className="text-center text-xl font-semibold dark:text-white">Be A Volunteer</h2>
                         </div>
                         <div>
                             <form onSubmit={handleForm} className="login-form">
                                 <div>
-                                    <label>Post Title</label>
+                                    <label className="dark:text-white">Post Title</label>
                                     <input type="text" name="post_title" defaultValue={post_title} disabled />
                                 </div>
                                 <div>
-                                    <label>Thumbnail URL</label>
+                                    <label className="dark:text-white">Thumbnail URL</label>
                                     <input type="text" name="thumbnail" defaultValue={thumbnail} disabled />
                                 </div>
                                 <div>
-                                    <label>Category</label>
+                                    <label className="dark:text-white">Category</label>
                                     <input type="text" name="category" defaultValue={category} disabled />
                                 </div>
                                 <div>
-                                    <label>Deadline</label>
+                                    <label className="dark:text-white">Deadline</label>
                                     <input type="text" name="deadline" defaultValue={deadline} disabled />
                                 </div>
                                 <div>
-                                    <label>Volunteers Needed</label>
+                                    <label className="dark:text-white">Volunteers Needed</label>
                                     <input type="text" name="volunteers_needed" defaultValue={volunteers_needed} disabled />
                                 </div>
                                 <div>
-                                    <label>Location</label>
+                                    <label className="dark:text-white">Location</label>
                                     <input type="text" name="location" defaultValue={location} disabled />
                                 </div>
                                 <div>
-                                    <label>Description</label>
+                                    <label className="dark:text-white">Description</label>
                                     <textarea className="w-full border py-[10px] px-[15px]" name="description" rows="3" defaultValue={description} disabled></textarea>
                                 </div>
                                 <div>
-                                    <label>Your Email</label>
+                                    <label className="dark:text-white">Your Email</label>
                                     <input type="email" name="email" defaultValue={userCurrent.email} disabled />
                                 </div>
                                 <div>
-                                    <label>Your Name</label>
+                                    <label className="dark:text-white">Your Name</label>
                                     <input type="text" name="displayName" defaultValue={userCurrent.displayName} disabled />
                                 </div>
                                 <div>
-                                    <label>Suggestion</label>
+                                    <label className="dark:text-white">Suggestion</label>
                                     <input type="text" required name="suggestion" placeholder="have any better idea for us?" />
                                 </div>
                                 <div>

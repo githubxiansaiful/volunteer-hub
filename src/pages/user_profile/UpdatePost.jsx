@@ -94,16 +94,16 @@ const UpdatePost = () => {
                     <div>
                         <form onSubmit={handleAddPost} className="login-form">
                             <div>
-                                <label>Post Title</label>
-                                <input required defaultValue={currentPost.post_title} type="text" name="post_title" />
+                                <label className='dark:text-white'>Post Title</label>
+                                <input required defaultValue={currentPost.post_title} type="text" name="post_title" className='dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a] dark:text-white' />
                             </div>
                             <div>
-                                <label>Thumbnail URL</label>
-                                <input required defaultValue={currentPost.thumbnail} type="text" name="thumbnail" />
+                                <label className='dark:text-white'>Thumbnail URL</label>
+                                <input required defaultValue={currentPost.thumbnail} type="text" name="thumbnail" className='dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a] dark:text-white' />
                             </div>
                             <div className='mb-3'>
-                                <label>Category</label>
-                                <select name="category" id="" className='w-full border px-[15px] rounded-sm py-[10px]'>
+                                <label className='dark:text-white'>Category</label>
+                                <select name="category" id="" className='w-full border px-[15px] rounded-sm py-[10px] dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a] dark:text-white'>
                                     <option value="Healthcare">Healthcare</option>
                                     <option value="Education">Education</option>
                                     <option value="Social Service">Social Service</option>
@@ -111,30 +111,30 @@ const UpdatePost = () => {
                                 </select>
                             </div>
                             <div>
-                                <label>Deadline</label>
+                                <label className='dark:text-white'>Deadline</label>
                                 <div className='w-full'>
-                                    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+                                    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} className='dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a] dark:text-white' />
                                 </div>
                             </div>
                             <div>
-                                <label>Volunteers Needed</label>
-                                <input required defaultValue={currentPost.volunteers_needed} type="text" name="volunteers_needed" />
+                                <label className='dark:text-white'>Volunteers Needed</label>
+                                <input required defaultValue={currentPost.volunteers_needed} type="text" name="volunteers_needed" className='dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a] dark:text-white' />
                             </div>
                             <div>
-                                <label>Location</label>
-                                <input required defaultValue={currentPost.location} type="text" name="location" />
+                                <label className='dark:text-white'>Location</label>
+                                <input required defaultValue={currentPost.location} className='dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a] dark:text-white' type="text" name="location" />
                             </div>
                             <div>
-                                <label>Description</label>
-                                <textarea required defaultValue={currentPost.description} className="w-full border py-[10px] px-[15px]" name="description" rows="3" ></textarea>
+                                <label className='dark:text-white'>Description</label>
+                                <textarea required defaultValue={currentPost.description} className="dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a] dark:text-white w-full border py-[10px] px-[15px]" name="description" rows="3" ></textarea>
                             </div>
                             <div>
-                                <label>Your Email</label>
-                                <input type="email" defaultValue={userCurrent.email} disabled name="email" />
+                                <label className='dark:text-white'>Your Email</label>
+                                <input type="email" defaultValue={userCurrent.email} disabled name="email" className='dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a] dark:text-white' />
                             </div>
                             <div>
-                                <label>Your Name</label>
-                                <input type="text" defaultValue={userCurrent.displayName} disabled name="displayName" />
+                                <label className='dark:text-white'>Your Name</label>
+                                <input type="text" defaultValue={userCurrent.displayName} disabled name="displayName" className='dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a] dark:text-white' />
                             </div>
                             <div>
                                 <button className="btn btn-primary w-full hover-effect">Submit Application</button>

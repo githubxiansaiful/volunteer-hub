@@ -1,30 +1,42 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../firebase/FirebaseProvider";
 
 const Header = () => {
     const { userCurrent, logOutUser } = useContext(AuthContext);
 
+    useEffect(() => {
+        // Apply theme based on localStorage value when component mounts
+        const theme = localStorage.getItem("theme");
+        if (theme === "dark") setDarkMode();
+        else setLightMode();
+    }, []);
+
     const setDarkMode = () => {
         document.querySelector("html").classList.add("dark");
         document.querySelector("html").classList.remove("light");
-    }
+        localStorage.setItem("theme", "dark"); // Store theme preference in localStorage
+    };
+
     const setLightMode = () => {
         document.querySelector("html").classList.add("light");
         document.querySelector("html").classList.remove("dark");
-    }
+        localStorage.setItem("theme", "light"); // Store theme preference in localStorage
+    };
 
     const toggleTheme = (event) => {
         if (event.target.checked) setDarkMode();
-        else setLightMode()
-    }
+        else setLightMode();
+    };
 
-    const navLinks = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/volunteer">Need Volunteer</NavLink></li>
-        <li><NavLink to="/about-us">About Us</NavLink></li>
-        <li><NavLink to="/contact-us">Contact Us</NavLink></li>
-    </>
+    const navLinks = (
+        <>
+            <li className="dark:text-white"><NavLink to="/">Home</NavLink></li>
+            <li className="dark:text-white"><NavLink to="/volunteer">Need Volunteer</NavLink></li>
+            <li className="dark:text-white"><NavLink to="/about-us">About Us</NavLink></li>
+            <li className="dark:text-white"><NavLink to="/contact-us">Contact Us</NavLink></li>
+        </>
+    );
 
     return (
         <>
@@ -56,13 +68,13 @@ const Header = () => {
                 <div className="container">
                     <div>
                         <div className="">
-                            <div className="navbar bg-base-100 pl-0 pr-0">
+                            <div className="navbar pl-0 pr-0">
                                 <div className="navbar-start">
                                     <div className="dropdown">
-                                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden pl-0">
+                                        <div tabIndex={0} role="button" className="btn dark:text-white btn-ghost lg:hidden pl-0">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                                         </div>
-                                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52  text-base">
+                                        <ul tabIndex={0} className="dark:bg-[#1D232A] menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52  text-base">
                                             {navLinks}
                                         </ul>
                                     </div>
@@ -75,8 +87,7 @@ const Header = () => {
                                 </div>
                                 <div className="navbar-end">
                                     {
-                                        userCurrent ? <>
-
+                                        userCurrent ? (
                                             <div className="dropdown dropdown-end">
                                                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                                     <div className="w-10 rounded-full">
@@ -91,11 +102,9 @@ const Header = () => {
                                                     <li><button onClick={logOutUser}>Log Out</button></li>
                                                 </ul>
                                             </div>
-                                        </>
-                                            :
-                                            <>
-                                                <Link to="/login" className="btn">Login</Link>
-                                            </>
+                                        ) : (
+                                            <Link to="/login" className="btn">Login</Link>
+                                        )
                                     }
                                 </div>
                             </div>

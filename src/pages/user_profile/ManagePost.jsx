@@ -100,14 +100,14 @@ const ManagePost = () => {
                                                         <img src={post.thumbnail} alt="" />
                                                     </div>
                                                     <div className="mb-2">
-                                                        <h2 className="text-xl font-bold">{post.post_title}</h2>
+                                                        <h2 className="text-xl font-bold dark:text-white">{post.post_title}</h2>
                                                     </div>
                                                     <div className="space-y-2">
-                                                        <p><i className="fa-solid fa-tag"></i> {post.category}</p>
-                                                        <p><i className="fa-solid fa-clock"></i> Deadline: {new Date(post.deadline).toLocaleDateString()}</p>
-                                                        <p><i className="fa-solid fa-location-dot"></i> {post.location}</p>
-                                                        <p><i className="fa-solid fa-users"></i> Apply Seat {post.volunteers_needed}</p>
-                                                        <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] px-3 py-3 rounded-lg"><i className="fa-solid fa-user"></i> Posted by: {post.displayName}</p>
+                                                        <p className="dark:text-white"><i className="fa-solid fa-tag"></i> {post.category}</p>
+                                                        <p className="dark:text-white"><i className="fa-solid fa-clock"></i> Deadline: {new Date(post.deadline).toLocaleDateString()}</p>
+                                                        <p className="dark:text-white"><i className="fa-solid fa-location-dot"></i> {post.location}</p>
+                                                        <p className="dark:text-white"><i className="fa-solid fa-users"></i> Apply Seat {post.volunteers_needed}</p>
+                                                        <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] px-3 py-3 rounded-lg dark:text-white"><i className="fa-solid fa-user"></i> Posted by: {post.displayName}</p>
                                                     </div>
                                                     <div className="grid grid-cols-2 gap-3 mt-3">
                                                         <Link to={`/update-post/${post._id}`}><button className="btn btn-primary w-full"><i className="fa-solid fa-pen-to-square"></i></button></Link>
@@ -117,7 +117,7 @@ const ManagePost = () => {
                                             ))
                                         ) : (
                                             // If there are no posts, render a message
-                                            <p>There are no posts.</p>
+                                            <p className="dark:text-white">There are no posts.</p>
                                         )
                                     )
                                 }

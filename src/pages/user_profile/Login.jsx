@@ -48,22 +48,22 @@ const Login = () => {
             </Helmet>
             <div className="container">
                 <div>
-                    <h3 className="text-center title-text mb-[25px]">Log in</h3>
+                    <h3 className="text-center title-text mb-[25px] dark:text-white">Log in</h3>
                     <div className="text-center space-x-3 mb-5">
                         <button onClick={() => handleSocialLogin(googleLogin)} className="social-login dark:border-[#f1f1f124]"><img src="https://auth.hostinger.com/assets/images/oauth/google.svg" /></button>
                         <button onClick={() => handleSocialLogin(facebookLogin)} className="social-login dark:border-[#f1f1f124] bg-[#1877f2]"><img src="https://auth.hostinger.com/assets/images/oauth/facebook.svg" /></button>
                         <button onClick={() => handleSocialLogin(githubLogin)} className="social-login dark:border-[#f1f1f124] bg-[#2f363d]"><img src="https://auth.hostinger.com/assets/images/oauth/github.svg" /></button>
                     </div>
                     <div className="flex flex-col w-full border-opacity-50">
-                        <div className="divider">OR</div>
+                        <div className="divider dark:text-white">OR</div>
                     </div>
                     <div className="mt-5 login-form">
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div>
-                                <input type="email" placeholder="Email" {...register("email", { required: true })} />
+                                <input type="email" className="dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a]" placeholder="Email" {...register("email", { required: true })} />
                             </div>
                             <div className="relative">
-                                <input type={showPassword ? "text" : "password"} placeholder="Password" {...register("password", { required: true })} />
+                                <input className="dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a]" type={showPassword ? "text" : "password"} placeholder="Password" {...register("password", { required: true })} />
                                 <p onClick={() => setShowPassword(!showPassword)} className="pass-eyes"><i className="fa-solid fa-eye"></i></p>
                             </div>
                             <div>
@@ -78,7 +78,7 @@ const Login = () => {
                         }
                     </div>
                     <div className="text-center mt-5">
-                        <h3>Do not have an account? <Link className="underline" to="/register">Register Now!</Link></h3>
+                        <h3 className="dark:text-white">Do not have an account? <Link className="underline" to="/register">Register Now!</Link></h3>
                     </div>
                 </div>
             </div>

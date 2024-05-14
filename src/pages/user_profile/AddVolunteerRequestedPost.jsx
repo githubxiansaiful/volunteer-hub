@@ -77,47 +77,47 @@ const AddVolunteerRequestedPost = () => {
                     <div>
                         <form onSubmit={handleAddPost} className="login-form">
                             <div>
-                                <label>Post Title</label>
-                                <input required type="text" name="post_title" />
+                                <label className='dark:text-white'>Post Title</label>
+                                <input required type="text" name="post_title" className='dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a] dark:text-white' />
                             </div>
                             <div>
-                                <label>Thumbnail URL</label>
-                                <input required type="text" name="thumbnail" />
+                                <label className='dark:text-white'>Thumbnail URL</label>
+                                <input required type="text" className='dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a] dark:text-white' name="thumbnail" />
                             </div>
                             <div className='mb-3'>
-                                <label>Category</label>
-                                <select name="category" id="" className='w-full border px-[15px] rounded-sm py-[10px]'>
-                                    <option value="Healthcare">Healthcare</option>
-                                    <option value="Education">Education</option>
-                                    <option value="Social Service">Social Service</option>
-                                    <option value="Animal Welfare">Animal Welfare</option>
+                                <label className='dark:text-white'>Category</label>
+                                <select name="category" id="" className='dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a] dark:text-white w-full border px-[15px] rounded-sm py-[10px]'>
+                                    <option className='dark:bg-[#171B2A] dark:text-white' value="Healthcare">Healthcare</option>
+                                    <option className='dark:bg-[#171B2A] dark:text-white' value="Education">Education</option>
+                                    <option className='dark:bg-[#171B2A] dark:text-white' value="Social Service">Social Service</option>
+                                    <option className='dark:bg-[#171B2A] dark:text-white' value="Animal Welfare">Animal Welfare</option>
                                 </select>
                             </div>
                             <div>
-                                <label>Deadline</label>
+                                <label className='dark:text-white'>Deadline</label>
                                 <div className='w-full'>
-                                    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+                                    <DatePicker className='dark:bg-[#f1f1f10a] dark:text-white dark:border-[#f1f1f10a]' selected={startDate} onChange={(date) => setStartDate(date)} />
                                 </div>
                             </div>
                             <div>
-                                <label>Volunteers Needed</label>
-                                <input required type="text" name="volunteers_needed" />
+                                <label className='dark:text-white'>Volunteers Needed</label>
+                                <input required type="text" name="volunteers_needed" className='dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a] dark:text-white' />
                             </div>
                             <div>
-                                <label>Location</label>
-                                <input required type="text" name="location" />
+                                <label className='dark:text-white'>Location</label>
+                                <input required type="text" name="location" className='dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a] dark:text-white' />
                             </div>
                             <div>
-                                <label>Description</label>
-                                <textarea required className="w-full border py-[10px] px-[15px]" name="description" rows="3" ></textarea>
+                                <label className='dark:text-white'>Description</label>
+                                <textarea required className="w-full border rounded dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a] dark:text-white py-[10px] px-[15px]" name="description" rows="3" ></textarea>
                             </div>
                             <div>
-                                <label>Your Email</label>
-                                <input type="email" defaultValue={userCurrent.email} disabled name="email" />
+                                <label className='dark:text-white'>Your Email</label>
+                                <input type="email" defaultValue={userCurrent.email} disabled name="email" className='dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a] dark:text-white' />
                             </div>
                             <div>
-                                <label>Your Name</label>
-                                <input type="text" defaultValue={userCurrent.displayName} disabled name="displayName" />
+                                <label className='dark:text-white'>Your Name</label>
+                                <input type="text" defaultValue={userCurrent.displayName} disabled name="displayName" className='dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a] dark:text-white' />
                             </div>
                             <div>
                                 <button className="btn btn-primary w-full hover-effect">Submit Application</button>

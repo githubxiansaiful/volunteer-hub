@@ -27,12 +27,12 @@ const MyProfile = () => {
                 <div className="container">
                     <div className=" rounded-2xl p-10 mx-auto max-w-[500px] shadow-xl">
                         <div>
-                            <h2 className="text-center text-2xl">Hi {userCurrent.displayName}, welcome back!</h2>
+                            <h2 className="text-center text-2xl dark:text-white">Hi {userCurrent.displayName}, welcome back!</h2>
                         </div>
                         <div className="max-w-[190px] h-[190px] overflow-hidden mx-auto rounded-full flex justify-center items-center mt-5 my-image-profile">
                             <img src={userCurrent.photoURL} />
                         </div>
-                        <div className="text-center mt-5">
+                        <div className="text-center mt-5 dark:text-white">
                             <p>Name: {userCurrent.displayName}</p>
                             <p>Email: {userCurrent.email}</p>
                             <Link to="/edit-profile" className="btn btn-primary mt-5">Edit Profile</Link>

@@ -5,8 +5,8 @@ const HowToJoin = () => {
         <div className="mb-[80px]">
             <div className='container'>
                 <div className='text-center space-y-5 mb-10'>
-                    <h2 className="text-3xl lg:text-4xl font-bold">How To Join?</h2>
-                    <p className="text-base lg:text-xl max-w-[600px] m-auto">Joining our community is simple and straightforward. Just follow these easy steps to become a part of our mission to make a difference</p>
+                    <h2 className="text-3xl dark:text-white lg:text-4xl font-bold">How To Join?</h2>
+                    <p className="text-base lg:text-xl dark:text-white max-w-[600px] m-auto">Joining our community is simple and straightforward. Just follow these easy steps to become a part of our mission to make a difference</p>
                 </div>
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 text-white'>
                     <div className='space-y-3 hover-effect bg-[#171B2A] p-5 lg:p-10 rounded-lg'>

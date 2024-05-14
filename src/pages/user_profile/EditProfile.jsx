@@ -45,7 +45,7 @@ const EditProfile = () => {
                 <div className="container">
                     <div className=" rounded-2xl p-10 mx-auto max-w-[500px] shadow-xl">
                         <div>
-                            <h2 className="text-center text-2xl">Edit Your Profile Info</h2>
+                            <h2 className="text-center text-2xl dark:text-white">Edit Your Profile Info</h2>
                         </div>
                         <div className="mt-5 login-form">
                             <form onSubmit={handleSubmit(onSubmit)}>
