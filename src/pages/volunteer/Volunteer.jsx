@@ -75,10 +75,10 @@ const Volunteer = () => {
                                                     </div>
                                                     <div className="justify-center items-center space-y-2 mb-3">
                                                         <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] w-full py-2 px-2 rounded-lg tooltip" data-tip="Volunteer Category"><i className="fa-solid fa-tag"></i> {tableVol.category}</p>
-                                                        <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] w-full py-2 px-2 rounded-lg tooltip" data-tip="Apply Last Date"><i className="fa-solid fa-clock"></i> {tableVol.deadline}</p>
+                                                        <p className="bg-[#f1f1f1] dark:bg-[#f1f1f10a] w-full py-2 px-2 rounded-lg tooltip" data-tip="Apply Last Date"><i className="fa-solid fa-clock"></i> {new Date(tableVol.deadline).toLocaleDateString()}</p>
                                                     </div>
                                                     <div>
-                                                        <Link className="text-center block bg-black text-white py-2 px-2 rounded-lg w-full">Learn More</Link>
+                                                        <Link to={`/volunteer-details/${tableVol._id}`} className="text-center block bg-black text-white py-2 px-2 rounded-lg w-full">Learn More</Link>
                                                     </div>
                                                 </div>
                                             </div>
