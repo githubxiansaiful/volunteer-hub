@@ -61,7 +61,8 @@ const router = createBrowserRouter([
             {
                 path: '/volunteer-details/:id',
                 element: <PrivateRoute><VolunteerDetails></VolunteerDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`${import.meta.env.VITE_API_URL}/post/${params.id}`)
+                // loader: ({ params }) => fetch(`${import.meta.env.VITE_API_URL}/post/${params.id}`)
+                loader: ({ params }) => fetch(`https://volunteer-management-server-lilac.vercel.app/post/${params.id}`)
             },
             {
                 path: '/update-post/:id',

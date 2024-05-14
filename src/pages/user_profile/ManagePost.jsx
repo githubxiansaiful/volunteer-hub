@@ -14,7 +14,8 @@ const ManagePost = () => {
 
     useEffect(() => {
         const getData = async () => {
-            const { data } = await axios(`${import.meta.env.VITE_API_URL}/user-posts/${userCurrent.email}`)
+            // const { data } = await axios(`${import.meta.env.VITE_API_URL}/user-posts/${userCurrent.email}`)
+            const { data } = await axios(`https://volunteer-management-server-lilac.vercel.app/user-posts/${userCurrent.email}`)
             setPost(data)
         }
         getData()
@@ -24,7 +25,8 @@ const ManagePost = () => {
 
     // Delete item
     const handleDeleteItem = (id) => {
-        fetch(`${import.meta.env.VITE_API_URL}/delete-post/${id}`, {
+        // fetch(`${import.meta.env.VITE_API_URL}/delete-post/${id}`, {
+        fetch(`https://volunteer-management-server-lilac.vercel.app/delete-post/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())

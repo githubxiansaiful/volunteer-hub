@@ -14,7 +14,8 @@ const VolunteerRequestedPost = () => {
 
     useEffect(() => {
         const getData = async () => {
-            const { data } = await axios(`${import.meta.env.VITE_API_URL}/user-application/${userCurrent.email}`)
+            // const { data } = await axios(`${import.meta.env.VITE_API_URL}/user-application/${userCurrent.email}`)
+            const { data } = await axios(`https://volunteer-management-server-lilac.vercel.app/user-application/${userCurrent.email}`)
             setrePosts(data)
         }
         getData()
