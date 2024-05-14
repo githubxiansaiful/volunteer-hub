@@ -37,7 +37,6 @@ const Header = () => {
         <>
             <li className={isDarkMode ? "text-white" : ""}><NavLink to="/">Home</NavLink></li>
             <li className={isDarkMode ? "text-white" : ""}><NavLink to="/volunteer">Need Volunteer</NavLink></li>
-            <li className={isDarkMode ? "text-white" : ""}><NavLink to="/about-us">About Us</NavLink></li>
             <li className={isDarkMode ? "text-white" : ""}><NavLink to="/contact-us">Contact Us</NavLink></li>
         </>
     );
