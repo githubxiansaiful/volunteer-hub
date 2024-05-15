@@ -78,7 +78,7 @@ const Register = () => {
                     <h3 className="text-center title-text mb-[25px] dark:text-white">Register</h3>
                     <div className="text-center space-x-3 mb-5">
                         <button onClick={() => handleSocialRegister(googleLogin)} className="social-login dark:border-[#f1f1f124]"><img src="https://auth.hostinger.com/assets/images/oauth/google.svg" /></button>
-                        <button onClick={() => handleSocialRegister(facebookLogin)} className="social-login dark:border-[#f1f1f124] bg-[#1877f2]"><img src="https://auth.hostinger.com/assets/images/oauth/facebook.svg" /></button>
+                        {/* <button onClick={() => handleSocialRegister(facebookLogin)} className="social-login dark:border-[#f1f1f124] bg-[#1877f2]"><img src="https://auth.hostinger.com/assets/images/oauth/facebook.svg" /></button> */}
                         <button onClick={() => handleSocialRegister(githubLogin)} className="social-login dark:border-[#f1f1f124] bg-[#2f363d]"><img src="https://auth.hostinger.com/assets/images/oauth/github.svg" /></button>
                     </div>
                     <div className="flex flex-col w-full border-opacity-50">
