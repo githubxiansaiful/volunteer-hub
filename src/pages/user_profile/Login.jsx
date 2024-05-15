@@ -60,10 +60,10 @@ const Login = () => {
                     <div className="mt-5 login-form">
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div>
-                                <input type="email" className="dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a]" placeholder="Email" {...register("email", { required: true })} />
+                                <input type="email" className="dark:bg-[#f1f1f10a] dark:text-white dark:border-[#f1f1f10a]" placeholder="Email" {...register("email", { required: true })} />
                             </div>
                             <div className="relative">
-                                <input className="dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a]" type={showPassword ? "text" : "password"} placeholder="Password" {...register("password", { required: true })} />
+                                <input className="dark:bg-[#f1f1f10a] dark:text-white dark:border-[#f1f1f10a]" type={showPassword ? "text" : "password"} placeholder="Password" {...register("password", { required: true })} />
                                 <p onClick={() => setShowPassword(!showPassword)} className="pass-eyes"><i className="fa-solid fa-eye"></i></p>
                             </div>
                             <div>

@@ -87,16 +87,16 @@ const Register = () => {
                     <div className="mt-5 login-form">
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div>
-                                <input className="dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a]" type="text" placeholder="Full Name" {...register("FullName", { required: true })} />
+                                <input className="dark:bg-[#f1f1f10a] dark:text-white dark:border-[#f1f1f10a]" type="text" placeholder="Full Name" {...register("FullName", { required: true })} />
                             </div>
                             <div>
-                                <input className="dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a]" type="email" placeholder="Email" {...register("email", { required: true })} />
+                                <input className="dark:bg-[#f1f1f10a] dark:text-white dark:border-[#f1f1f10a]" type="email" placeholder="Email" {...register("email", { required: true })} />
                             </div>
                             <div>
-                                <input className="dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a]" type="url" placeholder="photoURL" {...register("image", { required: true })} />
+                                <input className="dark:bg-[#f1f1f10a] dark:text-white dark:border-[#f1f1f10a]" type="url" placeholder="photoURL" {...register("image", { required: true })} />
                             </div>
                             <div className="relative">
-                                <input className="dark:bg-[#f1f1f10a] dark:border-[#f1f1f10a]" type={showPass ? "text" : "password"} placeholder="Password" {...register("password", { required: true })} />
+                                <input className="dark:bg-[#f1f1f10a] dark:text-white dark:border-[#f1f1f10a]" type={showPass ? "text" : "password"} placeholder="Password" {...register("password", { required: true })} />
                                 <p onClick={() => setShowPass(!showPass)} className="pass-eyes"><i className="fa-solid fa-eye"></i></p>
                             </div>
                             <div>
